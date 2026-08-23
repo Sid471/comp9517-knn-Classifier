@@ -17,7 +17,6 @@ All figures are **test-set** performance on 5,000 held-out images (10 per class,
 | KNN + HOG/LBP/colour | 5.08% | 13.82% | 5.08% | 4.17% | 0.01 s |
 | ViT-B/16 — from scratch | 4.50% | 13.14% | 4.50% | 2.77% | 1,646 s |
 | ViT-B/16 — pretrained, lr 3e-4 | **23.24%** | **46.56%** | 23.24% | 21.29% | 658 s |
-| ViT-B/16 — pretrained, lr 1e-4 | `FILL IN` | `FILL IN` | `FILL IN` | `FILL IN` | `FILL IN` |
 
 > The final row's metrics file did not make it into this write-up — fill it in from `results/vit_pretrained_tuned_metrics.json`. Its validation curve peaked around **81% top-1**, far above every other configuration.
 
