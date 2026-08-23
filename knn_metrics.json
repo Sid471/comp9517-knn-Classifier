@@ -1,0 +1,17 @@
+{
+  "top1": 0.0508,
+  "top5": 0.1382,
+  "balanced_accuracy": 0.0508,
+  "macro_precision": 0.04905581941278679,
+  "macro_recall": 0.0508,
+  "macro_f1": 0.04167031806311567,
+  "train_seconds": 0.00930166244506836,
+  "test_seconds": 7.132420063018799,
+  "configuration": {
+    "accuracy": 0.0476,
+    "k": 51,
+    "weights": "distance",
+    "metric": "cosine"
+  },
+  "pca_dimensions": 300
+}
