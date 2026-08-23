@@ -58,21 +58,15 @@ Hyperparameters were grid-searched on validation across k ∈ {1…51}, uniform/
 
 ### The KNN failure mode is hubness, and it is visible
 
-![KNN confusion matrix](results/knn_confusion_matrix.png)
-
 The vertical stripes are the story. A handful of classes act as **attractors**, absorbing predictions from across the dataset — class 3338 has recall 0.80 but precision 0.05, and class 4023 has recall 0.80 with precision 0.03. Both are correctly retrieving most of their own instances while being wrongly predicted for hundreds of others.
 
 This is *hubness*: in high-dimensional space, some points appear in disproportionately many nearest-neighbour lists, a known pathology of distance-based methods as dimensionality grows. It explains why cosine distance beat euclidean and why distance weighting beat uniform — both partially compensate for the same effect.
 
 ### The k-sweep never converged
 
-![KNN hyperparameter sweep](results/knn_k_sweep.png)
-
 Validation accuracy was **still climbing at k=51**, the largest value in the grid. The selected hyperparameter sits at the boundary of the search space, which means k=51 is a limit of the experiment rather than a discovered optimum. The grid should have extended further.
 
 ### Pretraining changes the shape of the errors, not just their count
-
-![ViT pretrained confusion matrix](results/vit_pretrained_confusion.png)
 
 The scratch model's confusion matrix has no visible diagonal. The pretrained model's does, and the tuned model's is a clean diagonal line. Per-class results shift accordingly: the pretrained model reaches F1 above 0.70 on several classes (0.76, 0.75, 0.74) while the scratch model's best class barely reaches 0.40.
 
