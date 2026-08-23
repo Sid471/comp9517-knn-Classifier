@@ -1,0 +1,13 @@
+{
+  "mode": "scratch",
+  "top1": 0.045,
+  "top5": 0.1314,
+  "balanced_accuracy": 0.045,
+  "macro_precision": 0.027051829026103605,
+  "macro_recall": 0.045,
+  "macro_f1": 0.027663768578129074,
+  "train_seconds": 1646.1259760856628,
+  "test_seconds": 13.208157300949097,
+  "epochs": 25,
+  "backbone": "vit_base_patch16_224"
+}
